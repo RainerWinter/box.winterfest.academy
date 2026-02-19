@@ -99,7 +99,41 @@
     color:rgba(255,255,255,.25); font-size:11px; letter-spacing:2.5px;
     text-transform:uppercase; z-index:2;
   }
-
+/* ═══════════════ BRIDGE ═══════════════ */
+.bridge {
+  background: #0f1f33;
+  padding: 52px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+.bridge-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.bridge-text {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.bridge-cta {
+  font-size: 17px;
+  color: rgba(255,255,255,0.60);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--blue);
+}
+  
   /* ═══════════════ STORY ═══════════════ */
   .story { background:var(--white); padding:96px 24px; }
   .story-inner { max-width:720px; margin:0 auto; }
@@ -200,6 +234,22 @@
   <p class="hero-scroll">&#x2193; &nbsp; Weiterlesen</p>
 </section>
 
+  <!-- BRIDGE -->
+<section class="bridge">
+  <div class="bridge-inner">
+    <p class="bridge-text">
+      Sie bekommen die Box nicht auf?
+    </p>
+    <p class="bridge-cta">
+      Rufen Sie mich an. Wir besprechen, wie wir gemeinsam nicht nur das Potenzial 
+      in der Box heben &ndash; sondern auch das in Ihren F&uuml;hrungskr&auml;ften.
+    </p>
+    <a class="btn btn-outline" href="https://zeeg.me/winterfest/boxenstopp" target="_blank">
+      Boxenstopp buchen
+    </a>
+  </div>
+</section>
+  
 <!-- STORY -->
 <section class="story">
   <div class="story-inner">
