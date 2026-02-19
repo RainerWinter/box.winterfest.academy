@@ -28,7 +28,7 @@
     overflow-x:hidden;
   }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     background: linear-gradient(150deg, #0f1f33 0%, var(--blue) 55%, #162540 100%);
     min-height: 100vh;
@@ -52,12 +52,20 @@
     text-transform:uppercase; color:var(--accent);
     margin-bottom:36px; opacity:.9;
   }
+  .hero-img-wrap {
+    margin-bottom: 44px;
+  }
+  .hero-img {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 16px 40px rgba(0,0,0,0.55));
+  }
   .hero h1 {
-    font-size: clamp(38px, 6.5vw, 76px);
+    font-size: clamp(36px, 6vw, 70px);
     font-weight:900;
     color: var(--white);
-    line-height:1.05;
-    max-width:860px;
+    line-height:1.08;
+    max-width:820px;
     margin-bottom:28px;
     letter-spacing:-2px;
   }
@@ -65,7 +73,7 @@
   .hero-sub {
     font-size: clamp(17px, 2vw, 20px);
     color: rgba(255,255,255,0.68);
-    max-width:540px;
+    max-width:520px;
     margin-bottom:52px;
     font-weight:400;
     line-height:1.7;
@@ -83,24 +91,13 @@
     box-shadow: 0 4px 28px rgba(201,168,76,.38);
   }
   .btn:hover { transform:translateY(-2px); box-shadow:0 8px 36px rgba(201,168,76,.50); }
-  .hero-img-wrap {
-    margin-bottom: 40px;
-  }
-  .hero-img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 12px 48px rgba(0,0,0,.45);
-    border: 2px solid rgba(201,168,76,.35);
-  }
   .hero-scroll {
     position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
     color:rgba(255,255,255,.28); font-size:11px; letter-spacing:2.5px;
     text-transform:uppercase;
   }
 
-  /* ── STORY SECTION ── */
+  /* STORY */
   .story {
     background: var(--white);
     padding: 96px 24px;
@@ -136,7 +133,7 @@
     line-height:1.6;
   }
 
-  /* ── KOSTEN SECTION ── */
+  /* KOSTEN */
   .kosten {
     background: var(--gray-light);
     padding: 96px 24px;
@@ -177,7 +174,7 @@
     line-height:1.4;
   }
 
-  /* ── PROGRAMM ── */
+  /* PROGRAMM */
   .programm {
     background: var(--white);
     padding: 96px 24px;
@@ -221,7 +218,7 @@
     font-size:14px; color:var(--text-body); line-height:1.6;
   }
 
-  /* ── RAINER ── */
+  /* RAINER */
   .rainer {
     background: linear-gradient(150deg, #0f1f33 0%, var(--blue) 100%);
     padding: 96px 24px;
@@ -239,14 +236,11 @@
     font-size:17px; color:rgba(255,255,255,.72);
     margin-bottom:20px; line-height:1.75;
   }
-  .rainer p strong { color:var(--white); }
+  .rainer p strong { color:var(--white); font-weight:700; }
   .rainer-facts {
     display:flex; justify-content:center;
     gap:40px; margin:44px 0 52px;
     flex-wrap:wrap;
-  }
-  .rainer-fact {
-    text-align:center;
   }
   .rainer-fact .val {
     font-size:36px; font-weight:900;
@@ -257,7 +251,7 @@
     letter-spacing:.3px;
   }
 
-  /* ── CTA ── */
+  /* CTA */
   .cta {
     background: var(--white);
     padding: 96px 24px;
@@ -265,8 +259,8 @@
   }
   .cta-inner { max-width:640px; margin:0 auto; }
   .cta h2 {
-    font-size: clamp(28px, 4vw, 46px);
-    font-weight:900; line-height:1.1;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight:900; line-height:1.15;
     letter-spacing:-1.5px; margin-bottom:20px;
   }
   .cta h2 em { color:var(--accent); font-style:normal; }
@@ -279,7 +273,7 @@
     margin-top:20px;
   }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     background:#0a1828;
     padding:36px 24px;
@@ -289,22 +283,29 @@
   }
   footer a { color:rgba(255,255,255,.45); text-decoration:none; }
   footer a:hover { color:var(--accent); }
-  footer .footer-links { margin-top:10px; display:flex; gap:24px; justify-content:center; }
+  footer .footer-links {
+    margin-top:10px; display:flex;
+    gap:24px; justify-content:center; flex-wrap:wrap;
+  }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     .kosten-inner { grid-template-columns:1fr; }
     .module-grid { grid-template-columns:1fr; }
     .rainer-facts { gap:28px; }
     .stat-grid { grid-template-columns:1fr 1fr; }
+    .hero-img { width:160px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
   <p class="hero-badge">WINTERFEST Leadership Academy</p>
+  <div class="hero-img-wrap">
+    <img src="box.png" alt="Die Holzbox – WINTERFEST Leadership Academy" class="hero-img">
+  </div>
   <h1>Sie halten die Box.<br>Sie sehen den Dollar.<br><em>Und kommen nicht ran.</em></h1>
   <p class="hero-sub">
     Das ist kein Trick. Das ist Führung.<br>
@@ -316,34 +317,31 @@
   <p class="hero-scroll">↓ &nbsp; Weiterlesen</p>
 </section>
 
-<!-- ═══ STORY ═══ -->
+<!-- STORY -->
 <section class="story">
   <div class="story-inner">
     <span class="section-label">Die Analogie</span>
     <h2>Potenzial sehen ist einfach.<br>Es zu heben, ist die Kunst.</h2>
-
     <p>
-      Vor Ihnen liegt eine kleine Holzbox. Drin: ein echter US-Dollar.
+      Vor Ihnen lag eine kleine Holzbox. Drin: ein echter US-Dollar.
       Die Herausforderung: Wie kommen Sie dran – ohne die Box kaputtzumachen?
     </p>
     <p>
       Die meisten probieren es mit Kraft. Andere suchen nach einem Knopf.
-      Wieder andere legen die Box weg und sagen: "Ist halt so."
+      Wieder andere legen die Box weg und sagen: „Ist halt so.“
     </p>
     <p>
       <strong>In Ihrem Unternehmen läuft gerade dasselbe.</strong>
-      Sie sehen Ihre Leute. Sie sehen was in ihnen steckt.
+      Sie sehen Ihre Leute. Sie sehen, was in ihnen steckt.
       Aber zwischen dem Potenzial und der tatsächlichen Leistung liegt eine Box
       - und Sie wissen nicht genau, wie man sie öffnet. Nicht ohne etwas zu beschädigen.
     </p>
-
     <div class="quote">
-      "Ich hab das Gefühl, ich red mit denen - aber es kommt nichts an."
+      „Ich hab das Gefühl, ich red mit denen – aber es kommt nichts an.“<br>
       Das ist kein Kommunikationsproblem. Das ist ein Führungsproblem.
     </div>
-
     <p>
-      Kein Draufhauen. Kein Zurechtdrehen. Sondern kluges Öffnen - mit Gefühl
+      Kein Draufhauen. Kein Zurechtdrehen. Sondern kluges Öffnen – mit Gefühl
       für das, was Menschen stark macht. Und dafür, was sie blockiert.
     </p>
     <p>
@@ -352,14 +350,14 @@
   </div>
 </section>
 
-<!-- ═══ KOSTEN ═══ -->
+<!-- KOSTEN -->
 <section class="kosten">
   <div class="kosten-inner">
     <div>
       <span class="section-label">Was schlechte Führung kostet</span>
       <h2>Führungsfehler sind keine weichen Faktoren.</h2>
       <p>
-        Eine Führungskraft, die nicht führt - oder falsch führt - kostet.
+        Eine Führungskraft, die nicht führt – oder falsch führt – kostet.
         Konkret. Jeden Monat. In Form von Fehlzeiten, Fluktuation,
         verpassten Entscheidungen und Mitarbeitern, die innerlich längst
         gekündigt haben.
@@ -367,7 +365,7 @@
       <p>
         Der Bundesverband für Personal schätzt: <strong>Ein verlorener
         Mitarbeiter kostet im Schnitt 6 bis 9 Monatsgehälter.</strong>
-        Recruiting, Einarbeitung, Produktivitätsverlust - nicht mitgerechnet.
+        Recruiting, Einarbeitung, Produktivitätsverlust – nicht mitgerechnet.
       </p>
       <p>
         Gute Führung ist keine Kür. Sie ist die günstigste
@@ -377,15 +375,15 @@
     <div class="stat-grid">
       <div class="stat-card">
         <div class="num">70%</div>
-        <div class="label">der Mitarbeiter kündigen wegen ihrer Führungskraft - nicht wegen des Jobs</div>
+        <div class="label">der Mitarbeiter kündigen wegen ihrer Führungskraft – nicht wegen des Jobs</div>
       </div>
       <div class="stat-card">
-        <div class="num">6-9×</div>
+        <div class="num">6–9×</div>
         <div class="label">Monatsgehalt kostet durchschnittlich ein Mitarbeiterverlust</div>
       </div>
       <div class="stat-card">
         <div class="num">34%</div>
-        <div class="label">der Arbeitnehmer in D sind aktiv unengagiert - eine direkte Folge schlechter Führung</div>
+        <div class="label">der Arbeitnehmer in D sind aktiv unengagiert – eine direkte Folge schlechter Führung</div>
       </div>
       <div class="stat-card">
         <div class="num">10+</div>
@@ -395,7 +393,7 @@
   </div>
 </section>
 
-<!-- ═══ PROGRAMM ═══ -->
+<!-- PROGRAMM -->
 <section class="programm">
   <div class="programm-inner">
     <span class="section-label">Das Programm</span>
@@ -408,32 +406,32 @@
       <div class="module-card">
         <span class="num">Haltung</span>
         <h3>Wer bin ich als Führungskraft?</h3>
-        <p>Klarheit über die eigene Rolle, Werte und Wirkung auf andere - bevor man andere entwickeln kann.</p>
+        <p>Klarheit über die eigene Rolle, Werte und Wirkung auf andere – bevor man andere entwickeln kann.</p>
       </div>
       <div class="module-card">
         <span class="num">Klarheit</span>
         <h3>Führen ohne Rätselraten.</h3>
-        <p>Erwartungen setzen, Gespräche führen, Feedback geben - so dass es wirklich ankommt.</p>
+        <p>Erwartungen setzen, Gespräche führen, Feedback geben – so dass es wirklich ankommt.</p>
       </div>
       <div class="module-card">
         <span class="num">Wirksamkeit</span>
         <h3>Ergebnisse durch Menschen.</h3>
-        <p>Teams entwickeln, Potenzial heben, Verantwortung übergeben - ohne den Laden zu verlieren.</p>
+        <p>Teams entwickeln, Potenzial heben, Verantwortung übergeben – ohne den Laden zu verlieren.</p>
       </div>
       <div class="module-card">
         <span class="num">Resilienz</span>
         <h3>Führen, wenn es schwierig wird.</h3>
-        <p>Konflikte, Krisen, schwierige Gespräche - und danach trotzdem noch ansprechbar sein.</p>
+        <p>Konflikte, Krisen, schwierige Gespräche – und danach trotzdem noch ansprechbar sein.</p>
       </div>
       <div class="module-card">
         <span class="num">Praxis</span>
         <h3>Was morgen früh anders ist.</h3>
-        <p>Kein Konzept das im Seminarordner verstaubt. Jedes Modul endet mit konkreten nächsten Schritten.</p>
+        <p>Kein Konzept, das im Seminarordner verstaubt. Jedes Modul endet mit konkreten nächsten Schritten.</p>
       </div>
       <div class="module-card">
         <span class="num">Gemeinschaft</span>
         <h3>Führungskräfte unter sich.</h3>
-        <p>Eine Gruppe gleichgesinnter Entscheider aus dem Mittelstand - die sich gegenseitig weiterbringen.</p>
+        <p>Eine Gruppe gleichgesinnter Entscheider aus dem Mittelstand – die sich gegenseitig weiterbringen.</p>
       </div>
     </div>
     <a class="btn" href="https://zeeg.me/winterfest/boxenstopp" target="_blank">
@@ -442,7 +440,7 @@
   </div>
 </section>
 
-<!-- ═══ RAINER ═══ -->
+<!-- RAINER -->
 <section class="rainer">
   <div class="rainer-inner">
     <span class="section-label" style="color:var(--accent)">Wer dahintersteckt</span>
@@ -450,11 +448,11 @@
     <p>
       Ich arbeite seit über 10 Jahren mit Führungskräften in technologiegetriebenen,
       mittelständischen Unternehmen. Ich kenne die Realität zwischen Auftragsdruck,
-      Fachkräftemangel und dem Teamgespräch das schon zu lange aufgeschoben wird.
+      Fachkräftemangel und dem Teamgespräch, das schon zu lange aufgeschoben wird.
     </p>
     <p>
-      <strong>Mein Ansatz:</strong> Klar, direkt, ohne Umwege. Ich sage Ihnen was ich sehe.
-      Ich arbeite mit Ihnen an dem was zählt - nicht an dem was gut klingt.
+      <strong>Mein Ansatz:</strong> Klar, direkt, ohne Umwege. Ich sage Ihnen, was ich sehe.
+      Ich arbeite mit Ihnen an dem, was zählt – nicht an dem, was gut klingt.
       Und ich bleibe dran, auch wenn es unbequem wird.
     </p>
     <div class="rainer-facts">
@@ -468,7 +466,7 @@
       </div>
       <div class="rainer-fact">
         <span class="val">KMU</span>
-        <span class="desc">Fokus - kein Konzern-Blabla</span>
+        <span class="desc">Fokus – kein Konzern-Blabla</span>
       </div>
     </div>
     <a class="btn" href="https://zeeg.me/winterfest/boxenstopp" target="_blank">
@@ -477,14 +475,14 @@
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
+<!-- CTA -->
 <section class="cta">
   <div class="cta-inner">
     <span class="section-label">Ihr nächster Schritt</span>
     <h2>Wer weiß, wie man eine Box öffnet, weiß noch lange nicht, wie man Menschen führt.<br><em>Genau darum geht es jetzt.</em></h2>
     <p>
       30 Minuten. Kein Pitch, kein Verkaufsgespräch.
-      Wir schauen gemeinsam, wo Sie gerade stehen - und ob 12Leadership
+      Wir schauen gemeinsam, wo Sie gerade stehen – und ob 12Leadership
       der richtige nächste Schritt für Sie ist.
     </p>
     <p>
@@ -500,7 +498,7 @@
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer>
   <div>© 2026 WINTERFEST Leadership Academy · Rainer Winter</div>
   <div class="footer-links">
