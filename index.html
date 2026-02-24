@@ -377,6 +377,205 @@
   </div>
 </section>
 
+<!-- ===== TESTIMONIAL AUTO-SLIDER ===== -->
+<section class="testimonial-slider-section">
+  <div class="ts-wrapper">
+    <div class="ts-track" id="tsTrack">
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Diese Schulung ist das mit Abstand Wertvollste, was ich in meiner beruflichen Laufbahn getan habe."</p>
+        <span class="ts-name">Götz Cammans</span>
+        <span class="ts-role">ehem. Operativer Gesamtleiter, AMS Marketing GmbH<br>(heute: Leiter IT-Projekte, Comp-Pro Systemhaus GmbH)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rainer schafft es, einen auf eine Weise zu fordern und zu fördern, dass man nicht nur als Führungskraft, sondern auch als Mensch wächst."</p>
+        <span class="ts-name">Birgit Henschel</span>
+        <span class="ts-role">ehem. Leiterin QM, AMS Marketing GmbH<br>(heute: Management- und Risikobeauftragte, Stadtwerke München GmbH)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Wir kennen inzwischen auch andere Anbieter solcher Trainings. Bisher sind wir treu geblieben – und das sagt eigentlich alles."</p>
+        <span class="ts-name">Andreas Ausfelder</span>
+        <span class="ts-role">ehem. Prokurist, Firmengruppe Förster + Sennewald<br>(heute: Geschäftsführer, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Führung wurde hier nicht theoretisch vermittelt, sondern konsequent im Arbeitsalltag verankert."</p>
+        <span class="ts-name">Pascal Jaensch</span>
+        <span class="ts-role">ehem. Teamlead Data and Security Protection, Blu Systems GmbH<br>(heute: Big-Data-Projektmanager, SVA System Vertrieb Alexander GmbH)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Ich treffe Entscheidungen definitiv bewusster und kommuniziere klarer – insgesamt fühle ich mich sicherer in meiner Rolle und gleichzeitig entspannter."</p>
+        <span class="ts-name">Anja Faltenbacher</span>
+        <span class="ts-role">ehem. Beratende Ingenieurin, Firmengruppe Förster + Sennewald<br>(heute: Bereichsleiterin Ingenieurbau, F+S Förster + Sennewald Ingenieurgesellschaft mbH)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Nach jeder Kurseinheit fühlte ich mich gestärkt und inspiriert, und dies hat sich unmittelbar auf mein Team und meine Arbeit ausgewirkt."</p>
+        <span class="ts-name">Derya Akkaya</span>
+        <span class="ts-role">ehem. Head of Accounting, BMW Automag GmbH<br>(heute: Business Finance Consultant – Interim Management Finance, selbständig)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Rückblickend bin ich überzeugt: Ohne das Training wäre ich heute wahrscheinlich nicht selbständig."</p>
+        <span class="ts-name">Manuel Sandler</span>
+        <span class="ts-role">ehem. Partner, CYRES Consulting<br>(heute: Manuel Sandler Consulting, freiberuflich)</span>
+      </div>
+
+      <div class="ts-slide">
+        <p class="ts-quote">„Mir wurde klar, dass kleine Veränderungen in meiner Kommunikation viel bewirken können – und dass ich nicht alles selbst lösen muss."</p>
+        <span class="ts-name">Alexander Moll</span>
+        <span class="ts-role">ehem. Bereichsleiter Netzabrechnung / MSB, Stadtwerke Erding</span>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="ts-dots" id="tsDots"></div>
+  </div>
+</section>
+
+<style>
+/* ---- SLIDER SECTION ---- */
+.testimonial-slider-section {
+  background: #0D1B2A;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.ts-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---- TRACK (overflow hidden) ---- */
+.ts-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ---- SINGLE SLIDE ---- */
+.ts-slide {
+  min-width: 100%;
+  padding: 48px 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ts-quote {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.7;
+  color: #F0EAD6;
+  font-style: italic;
+  margin: 0 0 32px 0;
+  position: relative;
+}
+
+.ts-quote::before {
+  content: "\201E";
+  font-size: 5rem;
+  color: #C9A84C;
+  line-height: 0;
+  vertical-align: -0.55em;
+  margin-right: 4px;
+  font-style: normal;
+}
+
+.ts-name {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #C9A84C;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ts-role {
+  display: block;
+  font-size: 0.82rem;
+  color: #8A9BB0;
+  line-height: 1.5;
+}
+
+/* ---- DOTS ---- */
+.ts-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.ts-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2E4057;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  padding: 0;
+}
+
+.ts-dot.active {
+  background: #C9A84C;
+  transform: scale(1.35);
+}
+</style>
+
+<script>
+(function () {
+  const track  = document.getElementById('tsTrack');
+  const dotsEl = document.getElementById('tsDots');
+  const slides = track.querySelectorAll('.ts-slide');
+  let current  = 0;
+  let timer;
+
+  // Build dots
+  slides.forEach(function (_, i) {
+    const btn = document.createElement('button');
+    btn.className = 'ts-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Slide ' + (i + 1));
+    btn.addEventListener('click', function () { goTo(i); resetTimer(); });
+    dotsEl.appendChild(btn);
+  });
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsEl.querySelectorAll('.ts-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function next() { goTo(current + 1); }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  // Pause on hover
+  track.addEventListener('mouseenter', function () { clearInterval(timer); });
+  track.addEventListener('mouseleave', resetTimer);
+
+  // Touch / swipe support
+  var startX = 0;
+  track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetTimer(); }
+  }, { passive: true });
+
+  resetTimer();
+})();
+</script>
+<!-- ===== END TESTIMONIAL SLIDER ===== -->
+
 <!-- RAINER -->
 <section class="rainer">
   <div class="rainer-inner">
